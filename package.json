@@ -1,0 +1,45 @@
+{
+    "name": "colab-keymap",
+    "displayName": "colab-keymap",
+    "description": "",
+    "publisher": "rebornix",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.59.0"
+    },
+    "categories": [
+        "Notebooks"
+    ],
+    "keywords": [
+        "notebook-keymap"
+    ],
+    "contributes": {
+        "keybindings": [
+            {
+                "key": "ctrl+enter",
+                "command": "notebook.cell.execute",
+                "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0"
+            },
+            {
+                "key": "a",
+                "command": "notebook.cell.insertCodeCellAbove",
+                "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookType == 'jupyter-notebook'"
+            },
+            {
+                "key": "b",
+                "command": "notebook.cell.insertCodeCellBelow",
+                "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookType == 'jupyter-notebook'"
+            },
+            {
+                "key": "shift+enter",
+                "command": "notebook.cell.executeAndSelectBelow",
+                "when": "notebookCellListFocused && notebookCellType == 'markup' || notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0"
+            },
+            {
+                "key": "shift+enter",
+                "command": "notebook.cell.executeAndSelectBelow",
+                "when": "config.jupyter.enableKeyboardShortcuts && notebookCellListFocused && notebookCellType == 'code' && notebookType == 'jupyter-notebook' || config.jupyter.enableKeyboardShortcuts && editorTextFocus && inputFocus && notebookEditorFocused && notebookType == 'jupyter-notebook'"
+            }
+        ]
+    }
+}
