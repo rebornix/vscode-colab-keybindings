@@ -1,9 +1,9 @@
 {
     "name": "colab-keymap",
-    "displayName": "colab-keymap",
+    "displayName": "Colab Keymap for Notebooks",
     "description": "",
     "publisher": "rebornix",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
         "vscode": "^1.59.0"
     },
@@ -23,12 +23,12 @@
             {
                 "key": "a",
                 "command": "notebook.cell.insertCodeCellAbove",
-                "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookType == 'jupyter-notebook'"
+                "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus"
             },
             {
                 "key": "b",
                 "command": "notebook.cell.insertCodeCellBelow",
-                "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus && notebookType == 'jupyter-notebook'"
+                "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus"
             },
             {
                 "key": "shift+enter",
@@ -38,7 +38,117 @@
             {
                 "key": "shift+enter",
                 "command": "notebook.cell.executeAndSelectBelow",
-                "when": "config.jupyter.enableKeyboardShortcuts && notebookCellListFocused && notebookCellType == 'code' && notebookType == 'jupyter-notebook' || config.jupyter.enableKeyboardShortcuts && editorTextFocus && inputFocus && notebookEditorFocused && notebookType == 'jupyter-notebook'"
+                "when": "config.jupyter.enableKeyboardShortcuts && notebookCellListFocused && notebookCellType == 'code' || config.jupyter.enableKeyboardShortcuts && editorTextFocus && inputFocus && notebookEditorFocused"
+            },
+            {
+                "key": "ctrl+m a",
+                "command": "notebook.cell.insertCodeCellAbove",
+                "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus"
+            },
+            {
+                "key": "cmd+m a",
+                "command": "notebook.cell.insertCodeCellAbove",
+                "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus"
+            },
+            {
+                "key": "ctrl+m b",
+                "command": "notebook.cell.insertCodeCellBelow",
+                "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus"
+            },
+            {
+                "key": "cmd+m b",
+                "command": "notebook.cell.insertCodeCellBelow",
+                "when": "config.jupyter.enableKeyboardShortcuts && notebookEditorFocused && !inputFocus"
+            },
+            {
+                "key": "ctrl+m y",
+                "command": "notebook.cell.changeToCode",
+                "when": "notebookEditorFocused && !inputFocus && notebookCellType == 'markup'"
+            },
+            {
+                "key": "cmd+m y",
+                "command": "notebook.cell.changeToCode",
+                "when": "notebookEditorFocused && !inputFocus && notebookCellType == 'markup'"
+            },
+            {
+                "key": "ctrl+m m",
+                "command": "notebook.cell.changeToMarkdown",
+                "when": "notebookEditorFocused && !inputFocus && notebookCellType == 'code'"
+            },
+            {
+                "key": "cmd+m m",
+                "command": "notebook.cell.changeToMarkdown",
+                "when": "notebookEditorFocused && !inputFocus && notebookCellType == 'code'"
+            },
+            {
+                "key": "ctrl+m d",
+                "command": "notebook.cell.delete",
+                "when": "notebookEditorFocused && !inputFocus"
+            },
+            {
+                "key": "cmd+m d",
+                "command": "notebook.cell.delete",
+                "when": "notebookEditorFocused && !inputFocus"
+            },
+            {
+                "key": "ctrl+m down",
+                "command": "notebook.cell.moveDown",
+                "when": "notebookEditorFocused && !inputFocus"
+            },
+            {
+                "key": "cmd+m down",
+                "command": "notebook.cell.moveDown",
+                "when": "notebookEditorFocused && !inputFocus"
+            },
+            {
+                "key": "ctrl+m up",
+                "command": "notebook.cell.moveUp",
+                "when": "notebookEditorFocused && !inputFocus"
+            },
+            {
+                "key": "cmd+m up",
+                "command": "notebook.cell.moveUp",
+                "when": "notebookEditorFocused && !inputFocus"
+            },
+            {
+                "key": "ctrl+m n",
+                "command": "list.focusDown",
+                "when": "notebookEditorFocused && !inputFocus"
+            },
+            {
+                "key": "cmd+m n",
+                "command": "list.focusDown",
+                "when": "notebookEditorFocused && !inputFocus"
+            },
+            {
+                "key": "ctrl+m p",
+                "command": "list.focusUp",
+                "when": "notebookEditorFocused && !inputFocus"
+            },
+            {
+                "key": "cmd+m p",
+                "command": "list.focusUp",
+                "when": "notebookEditorFocused && !inputFocus"
+            },
+            {
+                "key": "ctrl+m -",
+                "command": "notebook.cell.split",
+                "when": "notebookCellEditable && notebookEditable && notebookEditorFocused"
+            },
+            {
+                "key": "cmd+m -",
+                "command": "notebook.cell.split",
+                "when": "notebookCellEditable && notebookEditable && notebookEditorFocused"
+            },
+            {
+                "key": "ctrl+m l",
+                "command": "notebook.toggleLineNumbers",
+                "when": "notebookEditorFocused && !inputFocus"
+            },
+            {
+                "key": "cmd+m l",
+                "command": "notebook.toggleLineNumbers",
+                "when": "notebookEditorFocused && !inputFocus"
             }
         ]
     }
