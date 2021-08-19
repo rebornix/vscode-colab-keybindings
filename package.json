@@ -1,9 +1,9 @@
 {
     "name": "colab-keymap",
-    "displayName": "Colab Keymap for Notebooks",
-    "description": "Google Colab keymap for notebook in VS Code",
+    "displayName": "Google Colab Keymap",
+    "description": "Google Colab keymap for Notebook in VS Code",
     "publisher": "rebornix",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "engines": {
         "vscode": "^1.59.0"
     },
